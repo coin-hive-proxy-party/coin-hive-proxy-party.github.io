@@ -1,0 +1,98 @@
+.app {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.app .content p a {
+  color: black;
+  text-decoration: underline;
+}
+
+.app a:hover {
+  text-decoration: none;
+}
+
+.app .script input {
+  font-family: monospace;
+}
+
+.app textarea {
+  font-family: monospace;
+  white-space: pre;
+}
+
+.container {
+  width: 500px!important;
+}
+
+.subtitle {
+  color: grey;
+}
+
+.subtitle b {
+  color: black;
+}
+
+.pool-info-wrapper {
+  background-color: #f9f9f9!important;
+}
+
+.pool-info {
+  padding-top: 5px;
+  height: 45px;
+  padding-left: 30px;
+}
+
+.ui.statistic {
+    margin-right: 54px!important;
+}
+
+.ui.statistic>.value~.label, .ui.statistics .statistic>.value~.label {
+  font-size: 0.8em;
+}
+
+.ui.button {
+  font-weight: 300!important;
+}
+
+.deploy-btn b {
+  font-weight: bold!important;
+}
+
+.ui.loader {
+  width: 500px!important;
+}
+
+.script {
+  margin-bottom: 20px;
+}
+
+.steps, .steps a {
+  border-radius: 0px!important;
+}
+
+.steps {
+  border-left: none!important;
+  border-right: none!important;
+  margin-bottom: 0px!important;
+  border-bottom: none!important;
+}
+
+.help {
+  position: absolute;
+  width: 100%;
+  left: 0px;
+  bottom: 30px;
+  text-align: center;
+}
+
+.help a {
+  cursor: pointer;
+}
+
+.ui.modals.dimmer {
+  background-color: rgba(0,0,0,.95)!important;
+}
