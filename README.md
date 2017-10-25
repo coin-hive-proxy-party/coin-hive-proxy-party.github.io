@@ -48,7 +48,7 @@ Replace this:
 With this:
 
 ```html
-<script src="THIS-IS-YOUR-PROXY.now.sh/client?proxy"></script>
+<script src="THIS-IS-YOUR-PROXY.now.sh/client?party"></script>
 ```
 
 You can now keep using CoinHive's JavaScript Miner without worrying about AdBlock and/or mine on a different pool if you want. 
@@ -89,7 +89,7 @@ now login
 Finally just use `now alias` to change your proxy's domain
 
 ```
-now alias proxy-khlizaweshj.now.sh my-awesome-proxy
+now alias party-khlizaweshj.now.sh my-awesome-proxy
 ```
 
 Now your proxy's url will be `my-awesome-proxy.now.sh`
@@ -97,7 +97,7 @@ Now your proxy's url will be `my-awesome-proxy.now.sh`
 If you want to have your own domain, you can do so as well
 
 ```
-now alias proxy-khlizawelj.now.sh my-awesome-proxy.com
+now alias party-khlizawelj.now.sh my-awesome-proxy.com
 ```
 
 Now your proxy's url will be `my-awesome-proxy.com`, but you will have to pay for it via [zeit.co/domains](https://zeit.co/domains)
@@ -109,7 +109,7 @@ When you deploy your proxy it will get assigned 1 instance. This is for free.
 If you get a [paid plan](https://zeit.co/pricing) you can use `now scale` to increase the number of instances
 
 ```
-now scale proxy-khlizaweshj.now.sh 3
+now scale party-khlizaweshj.now.sh 3
 ```
 
 Now your proxy would be running on 3 instances. To learn more about scaling [read this](https://zeit.co/docs/getting-started/scaling).
@@ -127,7 +127,7 @@ That's probably because you created a proxy to a different pool than CoinHive, a
 When you use the proxy to mine on a different pool than CoinHive you have to provide your Monero Wallet Address instead of your Site Key, like this:
 
 ```html
-<script src="https://proxy-khlizaweshj.now.sh/client?proxy"></script>
+<script src="https://party-khlizaweshj.now.sh/client?party"></script>
 <script>
   var miner = new CoinHive.Anonymous('YOUR_MONERO_ADDRESS');
   miner.start();
@@ -148,18 +148,18 @@ Then enter `Host`, `Port` and `Difficulty`, and continue with the regular steps 
 
 #### Can I rename the global `CoinHive` variable?
 
-Yes, just send the name that you want to give to the global `CoinHive` variable as the `proxy` query param in your proxy url:
+Yes, just send the name that you want to give to the global `CoinHive` variable as the `party` query param in your proxy url:
 
 ```html
-<script src="https://proxy-khlizaweshj.now.sh/client?proxy=CHMiner"></script>
+<script src="https://party-khlizaweshj.now.sh/client?party=CHMiner"></script>
 ```
 
 Now you can access the `CoinHive` object as `CHMiner`, like this:
 
 ```html
-<script src="https://proxy-khlizaweshj.now.sh/client?proxy=CHMiner"></script>
+<script src="https://party-khlizaweshj.now.sh/client?party=CHMiner"></script>
 <script>
-  var miner = new CHMiner.Anonymous('YOUR_MONERO_ADDRESS');
+  var miner = new CHMiner.Anonymous('YOUR_SITE_KEY');
   miner.start();
 </script>
 ```
