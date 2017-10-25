@@ -139,3 +139,29 @@ If you don't have a Monero Wallet, you can get one on [mymonero.com](https://mym
 #### I'm getting an `internal_server_error` when I try to deploy my proxy, why?
 
 This is probably because you run out of free instances on your Zeit account. The free plan allows you to have a maximum of 3 running instances. If you need more, you can always [upgrade your plan](https://zeit.co/pricing).
+
+#### Can I use a custom pool?
+
+Yes, select the last option in the proxy select: `Custom Pool`.
+
+Then enter `Host`, `Port` and `Difficulty`, and continue with the regular steps to deploy your proxy.
+
+#### Can I rename the global `CoinHive` variable?
+
+Yes, just send the name that you want to give to the global `CoinHive` variable as the `proxy` query param in your proxy url:
+
+```html
+<script src="https://proxy-khlizaweshj.now.sh/client?proxy=CHMiner"></script>
+```
+
+Now you can access the `CoinHive` object as `CHMiner`, like this:
+
+```html
+<script src="https://proxy-khlizaweshj.now.sh/client?proxy=CHMiner"></script>
+<script>
+  var miner = new CHMiner.Anonymous('YOUR_MONERO_ADDRESS');
+  miner.start();
+</script>
+```
+
+
